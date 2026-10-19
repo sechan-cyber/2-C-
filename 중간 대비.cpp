@@ -1,10 +1,10 @@
 /*
-#define _CRT_SECURE_NO_WARNINGS 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-// ì†Œìˆ˜ íŒë³„ í•¨ìˆ˜ (í•¨ìˆ˜ 1)
+// ¼Ò¼ö ÆÇº° ÇÔ¼ö (ÇÔ¼ö 1)
 int isPrime(int n) {
     if (n <= 1) return 0;
     for (int i = 2; i * i <= n; i++) {
@@ -13,20 +13,20 @@ int isPrime(int n) {
     return 1;
 }
 
-// ë©”ì¸ í•¨ìˆ˜ (í•¨ìˆ˜ 2)
+// ¸ŞÀÎ ÇÔ¼ö (ÇÔ¼ö 2)
 int main() {
     srand((unsigned int)time(NULL));
     int n1, n2;
-    int arr[3]; // ë°°ì—´ ì‚¬ìš©
+    int arr[3]; // ¹è¿­ »ç¿ë
 
-    
+
     while (1) {
-        printf("<<<<< n1 ì…ë ¥: ");
+        printf("<<<<< n1 ÀÔ·Â: ");
         if (scanf("%d", &n1) != 1) {
             while (getchar() != '\n');
             continue;
         }
-        printf("<<<<< n2 ì…ë ¥: ");
+        printf("<<<<< n2 ÀÔ·Â: ");
         if (scanf("%d", &n2) != 1) {
             while (getchar() != '\n');
             continue;
@@ -36,24 +36,24 @@ int main() {
             break;
         }
         else {
-            printf(">>> ERROR: ì…ë ¥ ì˜¤ë¥˜!!! > ì…ë ¥ì¡°ê±´: n1>0 && n2>0 && n1 < n2\n");
+            printf(">>> ERROR: ÀÔ·Â ¿À·ù!!! > ÀÔ·ÂÁ¶°Ç: n1>0 && n2>0 && n1 < n2\n");
         }
     }
 
-    
+
     for (int i = 0; i < 3; i++) {
         arr[i] = n1 + rand() % (n2 - n1 + 1);
     }
 
-  
-    printf(">>> %d-%d ì‚¬ì´ì—ì„œ ë°œìƒëœ ë‚œìˆ˜ 3ê°œ: ", n1, n2);
+
+    printf(">>> %d-%d »çÀÌ¿¡¼­ ¹ß»ıµÈ ³­¼ö 3°³: ", n1, n2);
     for (int i = 0; i < 3; i++) {
         printf("%d", arr[i]);
         if (i < 2) printf(", ");
     }
     printf("\n");
 
-    
+
     int max = arr[0];
     int min = arr[0];
     for (int i = 1; i < 3; i++) {
@@ -61,17 +61,17 @@ int main() {
         if (arr[i] < min) min = arr[i];
     }
 
-    // ìµœëŒ€ê°’ ì¶œë ¥ 
-    printf(">>> 3ê°œì˜ ë‚œìˆ˜ì¤‘ ìµœëŒ€ê°’: %d(%s/%s)\n",
+    // ÃÖ´ë°ª Ãâ·Â
+    printf(">>> 3°³ÀÇ ³­¼öÁß ÃÖ´ë°ª: %d(%s/%s)\n",
         max,
-        (max % 2 == 0 ? "ì§ìˆ˜" : "í™€ìˆ˜"),
-        (isPrime(max) ? "ì†Œìˆ˜" : "ì†Œìˆ˜ ì•„ë‹˜"));
+        (max % 2 == 0 ? "Â¦¼ö" : "È¦¼ö"),
+        (isPrime(max) ? "¼Ò¼ö" : "¼Ò¼ö ¾Æ´Ô"));
 
-    // ìµœì†Œê°’ ì¶œë ¥ 
-    printf(">>> 3ê°œì˜ ë‚œìˆ˜ì¤‘ ìµœì†Œê°’: %d(%s/%s)\n",
+    // ÃÖ¼Ò°ª Ãâ·Â
+    printf(">>> 3°³ÀÇ ³­¼öÁß ÃÖ¼Ò°ª: %d(%s/%s)\n",
         min,
-        (min % 2 == 0 ? "ì§ìˆ˜" : "í™€ìˆ˜"),
-        (isPrime(min) ? "ì†Œìˆ˜" : "ì†Œìˆ˜ ì•„ë‹˜"));
+        (min % 2 == 0 ? "Â¦¼ö" : "È¦¼ö"),
+        (isPrime(min) ? "¼Ò¼ö" : "¼Ò¼ö ¾Æ´Ô"));
 
     return 0;
 }

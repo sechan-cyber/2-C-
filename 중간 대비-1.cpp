@@ -1,9 +1,10 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-// í•¨ìˆ˜ 1: ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ í•¨ìˆ˜ (ì‚¬ìš©ì ì •ì˜ í•¨ìˆ˜)
+// ÇÔ¼ö 1: ³»¸²Â÷¼ø Á¤·Ä ÇÔ¼ö (»ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö)
 void sortDescending(int arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - 1 - i; j++) {
@@ -16,61 +17,62 @@ void sortDescending(int arr[], int size) {
     }
 }
 
-// í•¨ìˆ˜ 2: ë©”ì¸ í•¨ìˆ˜
+// ÇÔ¼ö 2: ¸ŞÀÎ ÇÔ¼ö
 int main() {
     srand((unsigned int)time(NULL));
     int n;
-    int arr[15]; 
+    int arr[15];
 
- 
+
     while (1) {
-        printf("<<<<< ì–‘ì˜ ì •ìˆ˜ ì…ë ¥ (10<=n<=100): ");
+        printf("<<<<< ¾çÀÇ Á¤¼ö ÀÔ·Â (10<=n<=100): ");
         if (scanf("%d", &n) != 1)
         {
             while (getchar() != '\n');
-            printf(">>> ì…ë ¥ ì˜¤ë¥˜ ë°œìƒ, ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”\n");
+            printf(">>> ÀÔ·Â ¿À·ù ¹ß»ı, ´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä\n");
             continue;
         }
-        if (n >= 10 && n <= 100) 
+        if (n >= 10 && n <= 100)
         {
             break;
         }
-        else 
+        else
         {
-            printf(">>> ì…ë ¥ ì˜¤ë¥˜ ë°œìƒ, ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”\n");
+            printf(">>> ÀÔ·Â ¿À·ù ¹ß»ı, ´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä\n");
         }
     }
 
-    
+
     for (int i = 0; i < 15; i++) {
         arr[i] = rand() % (n + 1);
     }
 
-   
-    printf(">>> ë°œìƒëœ 15ê°œì˜ ë‚œìˆ˜: ");
+
+    printf(">>> ¹ß»ıµÈ 15°³ÀÇ ³­¼ö: ");
     for (int i = 0; i < 15; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
 
-    
+
     sortDescending(arr, 15);
 
-   
-    printf(">>> ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ ê²°ê³¼: ");
+
+    printf(">>> ³»¸²Â÷¼ø Á¤·Ä °á°ú: ");
     for (int i = 0; i < 15; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n\n");
 
-    // 4. ìµœëŒ€ê°’, ì¤‘ê°„ê°’, ìµœì†Œê°’ ì°¾ê¸° ë° ì¶œë ¥
-    int max = arr[0];       
-    int min = arr[14];      
-    int median = arr[7];   
+    // 4. ÃÖ´ë°ª, Áß°£°ª, ÃÖ¼Ò°ª Ã£±â ¹× Ãâ·Â
+    int max = arr[0];
+    int min = arr[14];
+    int median = arr[7];
 
-    printf(">>> ìµœëŒ€ê°’: %d\n", max);
-    printf(">>> ì¤‘ê°„ê°’: %d\n", median);
-    printf(">>> ìµœì†Œê°’: %d\n", min);
+    printf(">>> ÃÖ´ë°ª: %d\n", max);
+    printf(">>> Áß°£°ª: %d\n", median);
+    printf(">>> ÃÖ¼Ò°ª: %d\n", min);
 
     return 0;
 }
+*/
