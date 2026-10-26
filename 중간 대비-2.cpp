@@ -1,21 +1,21 @@
 #include <stdio.h>
-#inciude <stdlib.h>
+#include <stdlib.h>
 #include <time.h>
 
 int input_n(void) {
 	int n;
 	while (1) {
-		printf("9º¸´Ù Å« È¦¼ö nÀ» ÀÔ·ÂÇÏ¼¼¿ä: ");
+		printf("9ë³´ë‹¤ í° í™€ìˆ˜ nì„ ì…ë ¥í•˜ì„¸ìš”: ");
 		if (scanf("%d", &n) != 1) {
 			while (1) {
-				printf("À¯È£ÇÑ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:\n");
+				printf("ìœ í˜¸í•œ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:\n");
 				continue;
 
 			}
 			if (n > 9 && (n % 2 != 0)) {
 				break;
 			}
-			printf("Á¶°Ç¿¡ ¸ÂÁö ¾Ê½À´Ï´Ù.");
+			printf("ì¡°ê±´ì— ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 		return n;
 	}
